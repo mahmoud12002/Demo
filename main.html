@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            margin: 0;
+            border: 0;
+        }
+        header{
+            background-color: #262626;
+            height: 100px;
+            width: 100%;
+            position: fixwd;
+        }
+        .logo{
+            line-height: 62px; 
+            width: 50%;  
+            float: left;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .logo a{
+            text-decoration: none;
+            color: white;
+        }
+        .logo a:hover{
+            color: blueviolet;
+        }
+        .navbar{
+            float: right;
+            line-height: 100px;
+            width: 30%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .navbar a{
+            text-decoration: none;
+            padding: 16px;
+            color: white;
+        }
+        .navbar a:hover{
+            color: blueviolet;
+        }
+        .div{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hr{
+            width: 800px;
+        }
+
+        .home{
+            border-radius: 25px;
+            border: 2px solid silver;
+        }
+        .home:hover{
+            border: 2px solid blueviolet;
+        }
+        .headpara{
+            color: slateblue;
+            font-family: sans-serif;
+        }
+        .h{
+            text-align: center;
+            color: violet;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .p{
+            font-family: monospace;
+            color: black;
+            text-align: center;
+            padding: 5px;
+            font-size: 20px;
+        }
+        .learnMoreBtn{
+            float: center;
+            width: 120px;
+            height: 28px;
+            border-radius: 15px;
+            border: 2px solid violet;
+            background-color: transparent;
+            color: violet;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 1000;
+        }
+        .learnMoreBtn:hover{
+            background-color: violet;
+            color: white;
+        }
+        .hr1{
+            width: 400px;
+        }
+        .skills{
+            width: 300px;
+            max-height: 600px;
+            padding: 0 20px;
+        }
+        .skill-name{
+            font-size: 18px;
+            font-weight: 700;
+            color: fuchsia;
+            text-transform: uppercase;
+            margin: 20px 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        .skill-bar{
+            height: 14px;
+            background: #282828;
+            border-radius: 3px;
+        }
+        .skill-per{
+            height: 14px;
+            background: fuchsia;
+            border-radius: 3px;
+            position: relative;
+        }
+        .skill-per::before{
+            content: attr(per);
+            position: absolute;
+            padding: 4px 6px;
+            background: fuchsia;
+            color: white;
+            border-radius: 4px;
+            font-size: 12px;
+            top: -35px;
+            right: 0;
+            transform: translateX(50%);
+        }
+        .skill-per::after{
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            color: white;
+            background: transparent;
+            top: -20px;
+            right: 0;
+            transform: translateX(50%) rotate(45deg);
+            border-radius: 2px;
+        }
+        @keyframes fillBars{
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        .progressBar{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .developers{
+            border-radius: 50px;
+            float: center;
+        }
+        .devsHeader{
+            font-family: cursive
+        }
+        .devsP{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14PX;
+            
+        }
+        .devs{
+            text-align: center;
+            padding: 25px;
+            margin-top: 25px;
+            margin-left: 30px;
+        }
+        #teams{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 50px;
+            text-align: center;
+        }
+        #teams .team{
+            margin-top: 20px;
+        }
+        #imgDevs{
+            border-radius: 90px;
+        }
+        #teams .team h3{
+            color: red;
+        }
+        #joinUs .loginBtn{
+            background-color: green;
+            color: white;
+            border: 2px solid green;
+            width: 170px;
+            height: 27px;
+            border-radius: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #joinUs .upBtn{
+            background-color: blue;
+            color: white;
+            border: 2px solid blue;
+            width: 170px;
+            height: 27px;
+            border-radius: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #joinUs .loginBtn:hover{
+            background-color: transparent;
+            color: green;
+            border: 2px solid green;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #joinUs .upBtn:hover{
+            background-color: transparent;
+            color: blue;
+            border: 2px solid blue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        footer{
+            background-color: #262626;
+            bottom: 0;
+            width: 97%;
+            position: relative;
+            padding: 14px;
+        }
+        footer a{
+            text-decoration: none;
+            color: white;
+            padding: 7px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+        }
+        footer a:hover{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="###">
+            <h3>Tech Ware</h3>
+            </a>
+        </div>
+        <div class="navbar">
+            <a class="home" href="main.html">Home</a>
+            <a href="error.html">Contact us</a>
+            <a href="join us.html">Join us</a>
+            <a href="error.html">Service</a>
+        </div>
+        
+    </header>
+    <main>
+        <div>
+            <h2 class="div">Services</h2>
+        </div>
+        <hr class="hr"><br><br>
+        <!--creat your site-->
+        <div>
+            <center>
+            <img class="img" src="images/code.png" width="80px" height="80px" alt="" />
+            <h3 class="h">Creat your site</h3>
+            <p class="p">creat your site with smart <br> style and quick response with <br> pro developers <br> </p>
+            <a href="###">
+            <input class="learnMoreBtn" type="button" value="Learn More →" />
+            </a>
+            </center>
+        </div>
+        <br><br><hr class="hr1"><br>
+        <!--Corses--> 
+        <div>
+            <center>
+                <img class="img" src="images/courses.png" width="80px" height="80px" alt="" />
+                <h3 class="h">Courses</h3>
+                <p class="p">With these courses , you can <br> now build your sites efficiently <br> and easily with pro developers</p>
+                <a href="Courses.html">
+                    <input class="learnMoreBtn" type="button" value="Learn More →" />
+                </a>
+            </center>
+        </div>
+        <br><br><hr class="hr1"><br>
+        <!--skills-->
+        <div>
+            <center>
+            <img src="images/skills.png" width="80px" height="80px" alt="" /> 
+            <h3 class="h">Our Skills</h3>
+            </center>
+            <div class="progressBar">
+                <!--progress bar-->
+                <!--HTML-->
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">HTML</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="95%" style="max-width: 95%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                <!--CSS-->
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="skill-name">CSS</div>
+                            <div class="skill-bar">
+                                <div class="skill-per" per="85%" style="max-width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                <!--Java Script--> 
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-name">JS</div>
+                        <div class="skill-bar">
+                            <div class="skill-per" per="35%" style="max-width: 35%;"></div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+                <!--end-->
+        </div>
+        <br><br><br>
+        <hr class="hr1">
+        <br>
+        <!--Join us-->
+        <center id="joinUs">
+        <img src="images/user.png" width="80px" height="80px" alt="" />
+        <h3 class="h">Join us</h3>
+        <p class="p">Join us and get more <br> web corses and creat <br> web pages !</p>
+        <br>
+        <a href="login.html">
+        <input onclick="runLogin2()" class="loginBtn" type="button" value="Login" />
+        </a>
+        <br><br>
+        <a href="###">
+        <input class="upBtn" type="button" value="Sign up" />
+        </a>
+        <br>
+        <p id="lbl2"></p>
+        </center> 
+        <!--End-->
+        <br><br><br>
+        <hr class="hr1">
+        <br>
+        <!--Developers Zone-->
+        <center>
+            <img src="images/developers).png" width="80px" height="80px" alt="" /> 
+            <h3 class="h">Developers Zone</h3>   
+            <p class="p">Our Team ,</p>
+        </center> 
+        <!--mahmoud-->
+        <section id="teams">
+            <div id="team team1">
+                <img id="imgDevs" src="images/mahmoud.jpg" width="150px" height="150px" alt="" />
+                <h3 class="devsHeader">Mahmoud Hossam</h3>
+                <p class="devsP">Full Stuck Developer</p>
+            </div>
+            <!--mhmd-->
+            <div id="team team2">
+                <img id="imgDevs" src="images/mhmd.jpg" width="150px" height="150px" alt="" />
+                <h3 class="devsHeader">Mohamed Ashraf</h3>
+                <p class="devsP">AI Engineer</p>
+            </div>
+            <!--yousif-->
+            <div id="team team3">
+                <img id="imgDevs" src="images/yousif.jpg" width="150px" height="150px" alt="" />
+                <h3 class="devsHeader">Yousif Elgamily</h3>
+                <p class="devsP">Software Engineer</p>
+            </div>
+            <!--Marwa-->
+            <div id="team team4">
+                <img id="imgDevs" src="images/avatar.png" width="150px" height="150px" alt="" />
+                <h3 class="devsHeader">Marwa Elnoby</h3>
+                <p class="devsP">Full Stuck Developer</p>
+            </div>
+        </section>
+        <!--End-->
+        <br><br><hr class="hr1">
+        <!--footer-->
+        <footer>
+            <div class="footer">
+                <a href="error.html">About site</a>
+                <a href="error.html">Developers</a>
+                <a href="error.html">Privacy Policy</a>
+                <a href="error.html">Login</a>
+                <a href="error.html">Sign up</a>
+                <a href="error.html">Contact us</a>
+                <a href="error.html">Get courses</a>
+                <a href="error.html">Creat site</a>
+            </div>
+        </footer>
+        <!--end-->
+    </body>
+    </html>
+

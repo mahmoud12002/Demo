@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        header{
+            background-color: #262626;
+            height: 100px;
+            width: 100%;
+            position: fixwd;
+        }
+        .logo{
+            line-height: 62px; 
+            width: 50%;  
+            float: left;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .logo a{
+            text-decoration: none;
+            color: white;
+        }
+        .logo a:hover{
+            color: blueviolet;
+        }
+        .navbar{
+            float: right;
+            line-height: 100px;
+            width: 30%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .navbar a{
+            text-decoration: none;
+            padding: 16px;
+            color: white;
+        }
+        .navbar a:hover{
+            color: blueviolet;
+        }
+        .home{
+            border-radius: 25px;
+            border: 2px solid silver;
+        }
+        .home:hover{
+            border: 2px solid blueviolet;
+        }
+        .loginHeader{
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .head{
+            text-align: center;
+            padding-top: 30px;
+        }
+        .content{
+            text-align: center;
+        }
+        #avatar .avatarImage{
+            border-radius: 80px;
+        }
+        #names .f , .l{
+            width: 120px;
+            height: 23px;
+            border-radius: 5px;
+            border: 1px solid blue;
+        }
+        #form .email , .number , .password{
+            width: 220px;
+            height: 23px;
+            border-radius: 5px;
+            border: 1px solid blue;
+        }
+        .signUpBtn{
+            width: 120px;
+            height: 29px;
+            background-color: blue;
+            color: white;
+            border: 1px solid blue;
+            border-radius: 5px;
+        }
+        .signUpBtn:hover{
+            background-color: white;
+            color: blue;
+        }
+        .hr{
+            width: 800px;
+        }
+        #letter{
+            color: red;
+        }
+        .haveAnAccount{
+            text-decoration: none;
+            color: darkmagenta;
+        }
+        .haveAnAccount:hover{
+            color: darkgreen;
+        }
+        footer{
+            background-color: #262626;
+            bottom: 0;
+            width: 97%;
+            position: relative;
+            padding: 14px;
+        }
+        footer a{
+            text-decoration: none;
+            color: white;
+            padding: 7px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+        }
+        footer a:hover{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <div class="logo">
+                <a href="###">
+                <h3>Tech Ware</h3>
+                </a>
+            </div>
+            <div class="navbar">
+                <a class="home" href="###">Home</a>
+                <a href="###">Contact us</a>
+                <a href="###">Join us</a>
+                <a href="###">Service</a>
+            </div>
+            
+        </header>
+        <main>
+            <div>
+                <h3 class="head">Creat a new account</h3>
+                <p class="content">fill this information step by step , and click on sign up.</p>
+            </div>
+            <center>
+            <div id="avatar">
+                    <br>
+                <img class="avatarImage" src="images/avatar.png" width="150px" height="150" alt="" />               
+            </div>
+            <br>
+            <div id="names">
+                <input class="f" type="text" placeholder="First Name" required>
+                <input class="l" type="text" placeholder="Last Name" required>
+            </div>
+            <br>
+            <div id="form">
+                <input class="email" type="email" placeholder="Enter Your Email" required>
+                <br><br>
+                <input class="number" type="number" placeholder="Enter your phone number" required>
+                <br><br>
+                <input class="password" type="password" placeholder="Enter your password" maxlength="8" required>
+                <br><br>
+                <label for="m">Male</label>
+                <input id="m" type="radio" name="gender" value="male">
+                <label for="f">Female</label>
+                <input id="f" type="radio" name="gender" value="female">
+                <br><br>
+            </div>
+            <div>
+                <a href="###">
+                <input class="signUpBtn" type="button" value="Sign up" />
+                </a>
+            </div>
+            <br>
+            <div>
+            <a class="haveAnAccount" href="login.html">You already have an account ?</a>
+            </div>
+            <br>
+            <br><hr class="hr"> 
+            </center>
+        </main>
+        <footer>
+            <div class="footer">
+                <a href="error.html">About site</a>
+                <a href="error.html">Developers</a>
+                <a href="error.html">Privacy Policy</a>
+                <a href="error.html">Login</a>
+                <a href="error.html">Sign up</a>
+                <a href="error.html">Contact us</a>
+                <a href="error.html">Get courses</a>
+                <a href="error.html">Creat site</a>
+            </div>
+        </footer>
+        <script src="main.js"></script>
+</body>
+</html>

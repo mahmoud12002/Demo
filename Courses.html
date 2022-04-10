@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <style>
+         body{
+            margin: 0;
+            border: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        header{
+            background-color: #262626;
+            height: 100px;
+            width: 100%;
+            position: fixwd;
+        }
+        .logo{
+            line-height: 62px; 
+            width: 50%;  
+            float: left;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .logo a{
+            text-decoration: none;
+            color: white;
+        }
+        .logo a:hover{
+            color: blueviolet;
+        }
+        .navbar{
+            float: right;
+            line-height: 100px;
+            width: 30%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .navbar a{
+            text-decoration: none;
+            padding: 16px;
+            color: white;
+        }
+        .navbar a:hover{
+            color: blueviolet;
+        }
+        .div{
+            text-align: center;
+            padding: 20px;
+            font-size: 23px;
+        }
+        .hr{
+            width: 800px;
+        }
+        #courses{
+            height: 60vh; 
+            position: relative;
+        }
+        .course{
+            background-color: #888;
+            width: 280px;
+            height: 320px;
+            text-align: center;
+        }
+        .html{
+            position: absolute;
+            top: 12%;
+            left: 10%;
+        }
+        .css{
+            position: absolute;
+            top: 12%;
+            left: 40%;
+        }
+        .js{
+            position: absolute;
+            top: 12%;
+            left: 70%;
+        }
+        .html input{
+            width: 280px;
+            height: 38px;
+            float: left;
+            background-color: orangered;
+            border: 1px solid orangered;
+            color: white;
+        }
+        .html input:hover{
+            border: 1px solid orangered;
+            color: orangered;
+            background-color: white;
+        }
+        .css input{
+            width: 280px;
+            height: 38px;
+            float: left;
+            background-color: rgb(0, 110, 255);
+            border: 1px solid rgb(0, 110, 255);
+            color: white;
+        }
+        .css input:hover{
+            border: 1px solid rgb(0, 110, 255);
+            color: rgb(0, 110, 255);
+            background-color: white;
+        }
+        .js input{
+            width: 280px;
+            height: 38px;
+            float: left;
+            background-color: yellow;
+            border: 1px solid yellow;
+            color: white;
+        }
+        .js input:hover{
+            border: 1px solid yellow;
+            color: yellow;
+            background-color: white;
+        }
+        #courses .h3{
+            font-family: monospace;
+            padding: 15px;
+        }
+        .html p , .css p , .js p{
+            text-align: justify;
+            padding: 15px;
+        }
+        #courses-2{
+           position: relative;
+           height: 65vh;
+        }
+        #courses-2 .php{
+            background-color: rgb(102, 156, 207);
+            width: 280px;
+            height: 320px;
+            position: absolute;
+            top: 12%;
+            left: 10%;
+        }
+        .php{
+            text-align: center;
+            position: absolute;
+        }
+        .php img{
+            width: 130px;
+            height: 100px;
+            padding-top: 10px;
+        }
+        .php input{
+            width: 280px;
+            height: 38px;
+            float: left;
+            background-color: green;
+            border: 1px solid green;
+            color: white;
+        }
+        .php input:hover{
+            border: 1px solid green;
+            background-color: white;
+            color: green;
+        }
+        .php p{
+            text-align: justify;
+            padding: 15px;
+        }
+        #courses-2 .my-sql{
+            background-color: orange;
+            width: 280px;
+            height: 320px;
+            position: absolute;
+            top: 12%;
+            left: 40%;
+        }
+        .my-sql{
+            text-align: center;
+            position: absolute;
+        }
+        .my-sql img{
+            width: 130px;
+            height: 100px;
+            padding-top: 10px;
+        }
+        .my-sql input{
+            width: 280px;
+            height: 38px;
+            float: left;
+            background-color: rgb(0, 81, 255);
+            border: 1px solid rgb(0, 81, 255);
+            color: white;
+        }
+        .my-sql input:hover{
+            background-color: white;
+            border: 1px solid rgb(0, 81, 255);
+            color: rgb(0, 81, 255);
+        }
+        .my-sql p{
+            text-align: justify;
+            padding: 15px;
+        }
+        footer{
+            background-color: #262626;
+            bottom: 0;
+            width: 97%;
+            position: relative;
+            padding: 14px;
+        }
+        footer a{
+            text-decoration: none;
+            color: white;
+            padding: 7px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+        }
+        footer a:hover{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="###">
+            <h3>Tech Ware</h3>
+            </a>
+        </div>
+        <div class="navbar">
+            <a class="home" href="###">Home</a>
+            <a href="###">Contact us</a>
+            <a href="join us.html">Join us</a>
+            <a href="###">Service</a>
+        </div>
+        
+    </header>
+    <main>
+        <div>
+            <h2 class="div">Courses</h2>
+        </div>
+        <hr class="hr"><br><br>
+    <!--Courses Section-->
+        <section id="courses">
+    <!--HTML-->
+            <div class="course html">
+                <img src="images/html.jpg" width="280px" height="135px" alt="" />
+                <h3>HTML Courses</h3>
+                <p>HTML is the standard markup language for documents designed to be dispalayed in web browser</p>
+                <a>
+                    <input type="button" value="subscribe !" />
+                </a>
+            </div>
+    <!--CSS-->
+            <div class="course css">
+                <img src="images/CSS-2.png" width="280px" height="135px" alt="" />
+                <h3>CSS Courses</h3>
+                <p>CSS is used for describing the presentation of a document written in a markup language as HTML </p>
+                <a>
+                    <input class="subBtn" type="button" value="Subscribe !" />
+                </a>
+            </div>
+    <!--JS-->
+            <div class="course js">
+                <img src="images/java-script.jpg" width="280px" height="135px" alt="" />
+                <h3>Java Script Courses</h3>
+                <p>Java Script is high level , it used to creat more interactive pages beside other languages as HTML , CSS </p>
+                <a>
+                    <input class="subBtn" type="button" value="Subscribe !" />
+                </a>
+            </div>
+        </div>
+        </section>
+    <!--End Section-->
+    <!--Section 2-->
+        <section id="courses-2">
+    <!--PHP-->
+            <div class="php">
+                <img src="images/php.png" width="280px" height="135px" alt="" />
+                <h3>PHP Courses</h3>
+                <p>Connect your web page with web server as My sql , PHP has been widely ported and can be  deployed on most web servers on every os</p> 
+                <a>
+                    <input class="subBtn" type="button" value="Unavailable Now" disabled/>
+                </a>
+            </div>
+    <!--MY SQL-->
+            <div class="my-sql">
+                <img src="images/mysql.png" width="280px" height="135px" alt="" />
+                <h3>MY SQL Courses</h3>
+                <p>MY SQL is an open source relation database management system to store the information of client in the server</p> 
+                <a>
+                    <input class="subBtn" type="button" value=" Unavailable Now" disabled/>
+                </a>
+            </div>
+        </section>       
+    <!--End Section-->
+    <bR><BR><hr class="hr">
+    </main>
+    <footer>
+        <div class="footer">
+            <a href="error.html">About site</a>
+            <a href="error.html">Developers</a>
+            <a href="error.html">Privacy Policy</a>
+            <a href="error.html">Login</a>
+            <a href="error.html">Sign up</a>
+            <a href="error.html">Contact us</a>
+            <a href="error.html">Get courses</a>
+            <a href="error.html">Creat site</a>
+        </div>
+    </footer>
+</body>
+</html>
